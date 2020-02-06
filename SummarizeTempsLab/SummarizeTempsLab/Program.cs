@@ -48,34 +48,31 @@ namespace SummarizeTempsLab
                         // For each string add +1 to number of temperatures
                         amountTemp++;
 
+                        // If the current temperature value >= threshold 
+                        //      Increment "above" counter by one
                         if (temp >= tempThreshold)
                         {
-
+                            aboveTemp++;
+                        }
+                        // Else (temperature is below) increment
+                        //      Increment "below" counter by one
+                        else
+                        {
+                            belowTemp++;
                         }
 
                     }
-                    Console.WriteLine(amountTemp);
-                    Console.WriteLine(totalTemp);
+                    Console.WriteLine("There are " + aboveTemp + " temperatures above the threshold and " + belowTemp + " temperatures below the threshold.");
+                    Console.WriteLine("The average temperature is " + totalTemp/amountTemp + " degrees.");
                 }
 
                 
             }
-
-
-            // temperature data is in temps.txt
-
-
-            // If the current temperature value >= threshold 
-            //      Increment "above" counter by one
-            // Else (temperature is below) increment
-            //      Increment "below" counter by one
-            // If line is null exit loop
-            // Calculate the average temp
-            //      totalTemp/# of temp
-            
-            // Give user the results
-
             // Else (file does not exist) tell user file does not exist
+            else
+            {
+                Console.WriteLine("That file cannot be found");
+            }
         }
     }
 }
