@@ -1,0 +1,2 @@
+There are 247 temperatures above the threshold and 118 temperatures below the threshold.
+The average temperature is 49 degrees.
